@@ -1,3 +1,10 @@
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+
 //Olina Liang
 //2-4
 
@@ -27,7 +34,13 @@ void setup() {
  vx = random (-5,5);
  vy = random (-5,5);
  score = 0;
- lives =3;
+ lives = 3;
+ 
+ //Minim
+ minim = new Minim(this);
+ theme = minim.loadFile("MUSIC.mp3");
+ coin = minim.loadFile("SUCCESS.wav");
+ gameover = minim.loadFile("FAILURE.wav");
 }
 
 void draw() {
@@ -43,3 +56,7 @@ void draw() {
     println("Erroe: Mode = " + mode);
   }
 }
+
+//Sound variables
+Minim minim;
+AudioPlayer theme, coin, gameover;
