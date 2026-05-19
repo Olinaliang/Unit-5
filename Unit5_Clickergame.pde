@@ -14,6 +14,7 @@ final int INTRO = 0;
 final int GAME = 1;
 final int PAUSE = 2;
 final int GAMEOVER = 3;
+final int OPTIONS = 4;
 
 //Target Variables
 float x, y, d;
@@ -52,8 +53,10 @@ void draw() {
     pause();
   } else if (mode == GAMEOVER) {
     gameover();
+  } else if (mode == OPTIONS) {
+    options();
   } else {
-    println("Erroe: Mode = " + mode);
+    println("mode Error: Mode is " + mode);
   }
 }
 
