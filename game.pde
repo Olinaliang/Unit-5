@@ -1,7 +1,11 @@
-void game () {
-  background(0,255,0);
+void game() {
+  background(0);
+  
+  //paddles
+  circle(leftx, lefty, leftd);
+  circle(rightx, righty, rightd);
+  //ball
+  circle(ballx, bally, balld);
 }
-
-void gameClicks () {
-  //mode = GAMEOVER;
+void gameClicks() {
 }

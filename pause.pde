@@ -1,5 +1,5 @@
-void pause () {
-  background(0);
+void pause() {
 }
+
 void pauseClicks () {
 }

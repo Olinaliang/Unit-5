@@ -1,7 +1,5 @@
-void gameover() {
-  background(255,0,0);
+void gameover () {
 }
 
-void gameoverClicks () {
-  mode = INTRO;
+void gameoverClicks() {
 }
