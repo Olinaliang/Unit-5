@@ -3,9 +3,9 @@ void gameover() {
   background(backgroundColor);
   textSize(80);
   if (leftscore >= 3) {
-    drawtext("LEFT WINS!", width/2, height/2 - 80, shadowColor, leftColor);
+    text("LEFT WINS!", width/2, height/2 - 80, shadowColor, leftColor);
   } else {
-    drawtext("RIGHT WINS!", width/2, height/2 - 80, shadowColor, rightColor);
+    text("RIGHT WINS!", width/2, height/2 - 80, shadowColor, rightColor);
   }
 
   //final score

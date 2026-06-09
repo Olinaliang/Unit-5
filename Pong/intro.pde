@@ -3,7 +3,8 @@ void intro() {
   background(backgroundColor);
 
   textSize(140);
-  drawtext("PONG", width/2, 150, shadowColor, ballColor);
+  fill(0,0,255);
+  text("PONG", width/2, 150);
 
   rectButton("1 PLAYER", width/2, 350, 300, 100);
   rectButton("2 PLAYER", width/2, 500, 300, 100);

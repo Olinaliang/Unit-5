@@ -10,8 +10,8 @@ void game() {
 
   //display 
   textSize(55);
-  drawtext("" + leftscore, width/4, 80, shadowColor, leftColor);
-  drawtext("" + rightscore, 3*width/4, 80, shadowColor, rightColor);
+  text("" + leftscore, width/4, 80, shadowColor, leftColor);
+  text("" + rightscore, 3*width/4, 80, shadowColor, rightColor);
   textSize(20);
   fill(255);
   if (AI == true) {
@@ -42,15 +42,15 @@ void game() {
   }
 
   //restriction
-  if (lefty < leftd/2) {
-    lefty = leftd/2;
-  } else if (lefty > height - leftd/2) {
-    lefty = height - leftd/2;
+  if (lefty < leftd/2+balld) {
+    lefty = leftd/2+balld;
+  } else if (lefty > height - leftd/2-balld) {
+    lefty = height - leftd/2-balld;
   }
-  if (righty < rightd/2) {
-    righty = rightd/2;
-  } else if (righty > height - rightd/2) {
-    righty = height - rightd/2;
+  if (righty < rightd/2+balld) {
+    righty = rightd/2+balld;
+  } else if (righty > height - rightd/2-balld) {
+    righty = height - rightd/2-balld;
   }
 
   //ball
@@ -79,7 +79,7 @@ void game() {
   }
 
   //left paddle collision
-  if (dist(ballx, bally, leftx, lefty) < leftd/2 + balld/2 && vx < 0) {
+  if (dist(ballx, bally, leftx, lefty) < leftd/2 + balld/2) {
     vx = (ballx - leftx) / 10;
     vy = (bally - lefty) / 10;
     success.rewind();
@@ -87,7 +87,7 @@ void game() {
   }
 
   //right paddle collision
-  if (dist(ballx, bally, rightx, righty) < rightd/2 + balld/2 && vx > 0) {
+  if (dist(ballx, bally, rightx, righty) < rightd/2 + balld/2) {
     vx = (ballx - rightx) / 10;
     vy = (bally - righty) / 10;
     success.rewind();

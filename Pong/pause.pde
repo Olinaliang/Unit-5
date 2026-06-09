@@ -9,8 +9,8 @@ void pause() {
 
   //scores
   textSize(55);
-  drawtext("" + leftscore, width/4, 80, shadowColor, leftColor);
-  drawtext("" + rightscore, 3*width/4, 80, shadowColor, rightColor);
+  text("" + leftscore, width/4, 80, shadowColor, leftColor);
+  text("" + rightscore, 3*width/4, 80, shadowColor, rightColor);
 
   //paddles
   noStroke();
@@ -27,7 +27,7 @@ void pause() {
 
   //pause text
   textSize(90);
-  drawtext("PAUSED", width/2, height/2 - 60, shadowColor, hoverColor);
+  text("PAUSED", width/2, height/2 - 60);
 
   textSize(30);
   fill(255);

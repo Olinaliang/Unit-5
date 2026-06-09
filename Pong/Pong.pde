@@ -26,7 +26,7 @@ Minim minim;
 AudioPlayer theme, success, failure;
 
 //colours
-color backgroundColor = #E8DCCB;
+color backgroundColor = #FF2EB3;
 color gameColor = #102A43;
 color leftColor = #FF8FAB;
 color rightColor = #8EECF5;
@@ -49,7 +49,7 @@ void setup() {
   failure = minim.loadFile("FAILURE.wav");
 
   //font
-  PFont myFont = createFont("Verdana", 50);
+  PFont myFont = createFont("Arial", 50);
   textFont(myFont);
   
   //keyboard
@@ -111,11 +111,4 @@ void resetRound() {
   if (vy > -1 && vy < 1) {
     vy = 3;
   }
-}
-
-void drawtext(String t, float x, float y, int shadow, int main) {
-  fill(shadow);
-  text(t, x + 6, y + 6);
-  fill(main);
-  text(t, x, y);
 }
